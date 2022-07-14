@@ -1,0 +1,221 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.red-block {
+    width: 100px;
+    height: 100px;
+    margin: 10px; /* внешний отступ*/
+    background: blue;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    /*margin: 15px 25px 35px 100px; !* top right bottom left *!*/
+    margin-top: 40px;
+    /*margin-left: 20px;*/
+    /*margin: 20px 45px; !* =15px 25px 35px 100px; *!*/
+    /*margin-left: auto;*/
+    background: gold;
+}
+
+.red {
+    background: red;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.center {
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    margin: 0 auto;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.inside {
+    padding: 20px;
+}
+
+.border {
+    border: 5px solid black;
+    border-bottom-width: 2px;
+    border-top-width: 8px;
+    border-left-color: blue;
+    border-bottom-color: aqua;
+    border-left-style: dashed;
+}
+
+.border-radius {
+    border-radius: 10px 10px 10px 10px;
+    border-top-left-radius: 55px;
+}
+
+.block-indigo {
+    width: 100px;
+    height: 100px;
+    background: indigo;
+}
+
+.option.option-blue { /*слитно это 2 класса у одного элемента */
+    background: #ff8462;
+}
+
+.loop {
+    width: 300px;
+    height: 400px;
+    padding: 50px;
+    background: greenyellow;
+}
+
+.loop .indigo { /*через пробел  это дочерний класс у родителя */
+    background: black;
+}
+
+.indigo {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    background: indigo;
+}
+
+.list-wrapper {
+    width: 500px;
+    height: 500px;
+    list-style: none;
+    background: darkred;
+}
+
+.list-wrapper li {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    color: white;
+    background: black;
+    cursor: pointer;
+}
+
+.list-wrapper .text-yellow {
+    color: yellow;
+}
+
+.list-wrapper li:first-child {
+    color: aqua;
+}
+
+.list-wrapper li:last-child {
+    color: red;
+}
+
+.list-wrapper li:nth-child(2n + 1) { /* 2*0 + 1  =  1  */
+    color: blue;
+}
+
+.list-wrapper li:hover {
+    border: 1px solid black;
+    color: black;
+    background: white;
+    transition: all .2s linear;
+    /*transform: translateX(10px) translateY(15px);*/
+    transform: scale(1.1);
+}
+
+.position-static {
+    position: relative;
+    top: 20px;
+    right: 20px;
+    bottom: 0;
+    left: 0;
+}
+
+.position-relative {
+    position: relative;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 90px;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.position-absolut .position-absolut-1 .position-absolut-2 {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.position-absolut {
+    z-index: 10;
+}
+
+.position-absolut-1 {
+    left: 150px;
+    z-index: 0; /* только к элемента м у которых position: свойство не static*/
+    background: black;
+}
+
+.position-absolut-2 {
+    left: 250px;
+    z-index: 0; /* только к элемента м у которых position: свойство не static*/
+    background: red;
+}
+
+/*.position-fixed {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*}*/
+
+.container {
+    width: 1000px;
+    height: 2000px;
+    margin-top: 100px;
+    border: 1px solid black;
+    background: green;
+}
+
+.position-sticky {
+    position: sticky;
+    top: 120px;
+    left: 230px;
+}
+
+.list-wrapper-1 {
+    width: 500px;
+    height: 500px;
+    list-style: none;
+    background: darkred;
+}
+
+/*.list-wrapper-1 li > div {*/
+/*    color: red;*/
+/*}*/
+
+.wrapper-1 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: black;
+}
+
+.wrapper-1::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right:70px;
+    width: 1px;
+    height: 100%;
+    background: red;
+}
